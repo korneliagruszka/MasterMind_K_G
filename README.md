@@ -15,10 +15,13 @@ Gra MasterMind napisana w Javie. Projekt ten pozwala użytkownikowi odgadnąć l
    cd MasterMind_K_G
 
 2. Przejdź do folderu projektu:
+   ```bash
    cd src
 
 3. Skompiluj kod:
+   ```bash
    javac *.java
 
 4. Uruchom grę:
+   ```bash
    java MasterMind
