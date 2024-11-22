@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class MasterMind {
     public static void main(String[] args){
-        System.out.println("Witaj w grze MasterMind!");
-        System.out.println("Zgadnij 4 cyfrowy kod składający się z liczb od 1 do 6.");
+        System.out.println(Colors.GREEN + "Witaj w grze MasterMind!" + Colors.RESET);
+        System.out.println(Colors.GREEN + "Zgadnij 4 cyfrowy kod składający się z liczb od 1 do 6." + Colors.RESET);
         
         Scanner scann = new Scanner(System.in);
         Random rand = new Random();
@@ -20,7 +20,7 @@ public class MasterMind {
         }
         
         while(guessed == false){
-            System.out.println("Wprowadź swoją próbę: ");
+            System.out.println(Colors.GRAY + "Wprowadź swoją próbę: " + Colors.RESET);
             String guess = scann.nextLine();
             
             try{
@@ -36,7 +36,7 @@ public class MasterMind {
                 }
                 
             }catch(NumberFormatException e){
-                System.out.println("Wprowadź liczbę od 1 do " + maxDigit + ".");
+                System.out.println(Colors.GRAY + "Wprowadź liczbę od 1 do " + maxDigit + "." + Colors.RESET);
             }
             
             int identicalButNotInPlace = 0;
@@ -67,11 +67,11 @@ public class MasterMind {
             }
             
             if(identicalAndInPlace == codeLength){
-                System.out.println("Gratulacje - Kod zosatł odgadnięty!");
+                System.out.println(Colors.GREEN + "Gratulacje - Kod zosatł odgadnięty!" + Colors.RESET);
                 guessed = true;
             } else {
-                System.out.println("Poprawne cyfry na właściwej pozycji: " + identicalAndInPlace);
-                System.out.println("Poprawne cyfry na niewłaściwej pozycji: " + identicalButNotInPlace);
+                System.out.println(Colors.BLUE + "Poprawne cyfry na właściwej pozycji: " + identicalAndInPlace + Colors.RESET);
+                System.out.println(Colors.BLUE + "Poprawne cyfry na niewłaściwej pozycji: " + identicalButNotInPlace + Colors.RESET);
             }
         }
 
